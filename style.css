@@ -45,7 +45,7 @@ h2 {
 }
 
 #object1:hover {
-  animation: growObject 3s linear forwards;
+  animation: growObject 2s linear forwards;
   cursor: pointer;
 }
 
