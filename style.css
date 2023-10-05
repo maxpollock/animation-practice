@@ -68,11 +68,11 @@ h2 {
 
 .menu {
   display: flex;
-  position: relative;
-  top: -40px;
-  left: 1880px;
+  position: fixed;
+  right: 10px;
   height: 400px;
   width: 300px;
+  transform: translateX(90%);
 }
 
 .menu span {
@@ -91,6 +91,7 @@ h2 {
 .menu:hover {
   animation: moveMenu 1s linear forwards;
   cursor: pointer;
+  transform: translateX(0%);
 }
 
 /* keyframes */
@@ -170,11 +171,11 @@ h2 {
 
 @keyframes moveMenu {
   0% {
-    right: 0px;
+    transform: translateX(90%);
   }
 
   100% {
-    left: 1620px;
+    transform: translateX(0%);
   }
 }
 /* Hover States */
