@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  font-size: 1.8rem;
+  font-family: "Young Serif", serif;
+}
+
+body,
+#object1,
+#object2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Young Serif", serif;
+}
+
+#object1 {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#object2 {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+}
+
+#object1:hover {
+  animation: growObject 3s linear forwards;
+  cursor: pointer;
+}
+
+#object2:hover {
+  animation: changeShape 3s linear forwards;
+  cursor: pointer;
+}
+
+@keyframes changeShape {
+  0% {
+    border-radius: 0%;
+  }
+  25% {
+    border-radius: 50%;
+    background-color: orange;
+  }
+  40% {
+    transform: scale(0.8);
+    border-radius: 50%;
+    background-color: olivedrab;
+    color: white;
+  }
+  60% {
+    transform: scale(1.5);
+    border-radius: 50%;
+    background-color: lightblue;
+    color: black;
+  }
+  80% {
+    transform: scale(2);
+    border-radius: 50%;
+    background-color: darkred;
+    color: white;
+  }
+  100% {
+    transform: scale(1);
+    background-color: darkmagenta;
+    color: white;
+    border-radius: 50%;
+  }
+}
+
+@keyframes growObject {
+  0% {
+    transform: scale(1) rotate(0deg);
+    background-color: red;
+  }
+  50% {
+    transform: scale(2) rotate(180deg);
+    background-color: orange;
+    color: black;
+  }
+  100% {
+    transform: scale(3) rotate(360deg);
+    background-color: olivedrab;
+    color: white;
+  }
+}
