@@ -31,6 +31,13 @@ header {
   display: flex;
   justify-content: center;
 }
+
+#dot {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 10px;
+}
 body,
 #object1,
 #object2 {
@@ -86,12 +93,6 @@ h2 {
 
 .menu-contents img {
   width: 100px;
-}
-
-.menu:hover {
-  animation: moveMenu 1s linear forwards;
-  cursor: pointer;
-  transform: translateX(0%);
 }
 
 /* keyframes */
@@ -178,6 +179,15 @@ h2 {
     transform: translateX(0%);
   }
 }
+
+@keyframes dotDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2000%);
+  }
+}
 /* Hover States */
 #animate:hover {
   animation: spinWord 1.5s linear infinite;
@@ -197,4 +207,15 @@ h2 {
 #object2:hover {
   animation: changeShape 3s linear forwards;
   cursor: pointer;
+}
+
+.menu:hover {
+  animation: moveMenu 1s linear forwards;
+  cursor: pointer;
+  transform: translateX(0%);
+}
+
+#dot:hover {
+  cursor: pointer;
+  animation: dotDown 2s linear 1;
 }
